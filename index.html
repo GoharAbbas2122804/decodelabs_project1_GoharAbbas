@@ -36,10 +36,11 @@
         Lumos<span class="text-primary">.dev</span>
       </a>
 
+      <!-- Desktop Primary Navigation Links -->
       <nav class="main-nav" aria-label="Primary navigation" data-main-nav>
         <ul class="main-nav__list" role="list">
           <li><a href="#home" class="main-nav__link main-nav__link--active">Home</a></li>
-          <li><a href="#strategy" class="main-nav__link">Strategy & Blueprint</a></li>
+          <li><a href="#strategy" class="main-nav__link">Strategy &amp; Blueprint</a></li>
           <li><a href="#mobile-vision" class="main-nav__link">Mobile Web</a></li>
           <li><a href="#aesthetics" class="main-nav__link">2025 Aesthetics</a></li>
           <li><a href="#toolkit" class="main-nav__link">Raw Toolkit</a></li>
@@ -49,14 +50,14 @@
       </nav>
 
       <div class="site-header__actions">
-        <!-- Slide 2 Golden Rule Grayscale Mode Tester -->
-        <button class="tool-btn" data-grayscale-toggle type="button" title="Test Golden Rule: If it doesn't work in grayscale, color won't fix it" aria-pressed="false">
+        <!-- Slide 2 Golden Rule Grayscale Mode Tester (Desktop Only) -->
+        <button class="tool-btn tool-btn--desktop-only" data-grayscale-toggle type="button" title="Test Golden Rule: If it doesn't work in grayscale, color won't fix it" aria-pressed="false">
           <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 2a10 10 0 0 1 0 20z" fill="currentColor"/></svg>
           <span>Grayscale</span>
         </button>
 
-        <!-- Semantic HTML Inspector Toggle -->
-        <button class="tool-btn" data-semantic-toggle type="button" title="Highlight Semantic HTML Landmarks & WCAG Structure">
+        <!-- Semantic HTML Inspector Toggle (Desktop Only) -->
+        <button class="tool-btn tool-btn--desktop-only" data-semantic-toggle type="button" title="Highlight Semantic HTML Landmarks &amp; WCAG Structure">
           <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
           <span>Semantic</span>
         </button>
@@ -75,7 +76,7 @@
           </svg>
         </button>
 
-        <!-- Mobile Menu Toggle -->
+        <!-- Mobile Menu Toggle Button -->
         <button class="hamburger" data-hamburger type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-nav">
           <span class="hamburger__line"></span>
           <span class="hamburger__line"></span>
@@ -88,13 +89,26 @@
     <nav class="mobile-nav" id="mobile-nav" data-mobile-nav aria-label="Mobile navigation">
       <ul class="mobile-nav__list" role="list">
         <li><a href="#home" class="mobile-nav__link">Home</a></li>
-        <li><a href="#strategy" class="mobile-nav__link">Strategy & Blueprint</a></li>
+        <li><a href="#strategy" class="mobile-nav__link">Strategy &amp; Blueprint</a></li>
         <li><a href="#mobile-vision" class="mobile-nav__link">Mobile Web</a></li>
         <li><a href="#aesthetics" class="mobile-nav__link">2025 Aesthetics</a></li>
         <li><a href="#toolkit" class="mobile-nav__link">Raw Toolkit</a></li>
         <li><a href="#services" class="mobile-nav__link">Services</a></li>
         <li><a href="#contact" class="mobile-nav__link">Contact</a></li>
       </ul>
+
+      <!-- Developer Tools Section inside Mobile Menu Drawer -->
+      <div class="mobile-nav__tools">
+        <span class="mobile-nav__tools-title">Developer Inspection Tools</span>
+        <button class="tool-btn mobile-nav__tool-btn" data-grayscale-toggle type="button">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a10 10 0 0 1 0 20z" fill="currentColor"/></svg>
+          <span>Toggle Grayscale (Golden Rule)</span>
+        </button>
+        <button class="tool-btn mobile-nav__tool-btn" data-semantic-toggle type="button">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+          <span>Toggle Semantic HTML Outlines</span>
+        </button>
+      </div>
     </nav>
   </header>
 
@@ -105,23 +119,42 @@
       <div class="hero__bg">
         <picture>
           <source srcset="assets/images/hero-bg.webp" type="image/webp">
-          <img src="assets/images/hero-bg.webp" alt="" class="hero__bg-img" width="1600" height="900" loading="eager" fetchpriority="high">
+          <img src="assets/images/hero-bg.webp" alt="Background Texture" class="hero__bg-img" width="1600" height="900" loading="eager" fetchpriority="high">
         </picture>
         <div class="hero__overlay"></div>
       </div>
-      <div class="container hero__content" data-reveal>
-        <span class="hero__badge">Decode Labs Internship — Project 1 🎨</span>
-        <h1 id="hero-title" class="hero__title">Responsive Frontend Interface</h1>
-        <p class="hero__subtitle">Architecting high-performance web applications with semantic HTML5, CSS3 Grid/Flexbox, and pure Vanilla JavaScript — 100% framework-free.</p>
-        <div class="hero__actions">
-          <a href="#strategy" class="btn btn--primary btn--lg">Explore The Blueprint</a>
-          <button class="btn btn--secondary btn--lg" data-grayscale-toggle type="button">Test Golden Rule (Grayscale)</button>
+
+      <div class="container hero__grid" data-reveal>
+        <!-- Hero Text Column -->
+        <div class="hero__content">
+          <span class="hero__badge">Decode Labs Internship — Project 1 🎨</span>
+          <h1 id="hero-title" class="hero__title">Responsive Frontend Interface</h1>
+          <p class="hero__subtitle">Architecting high-performance web applications with semantic HTML5, CSS3 Grid/Flexbox, and pure Vanilla JavaScript — 100% framework-free.</p>
+          <div class="hero__actions">
+            <a href="#strategy" class="btn btn--primary btn--lg">Explore The Blueprint</a>
+            <button class="btn btn--secondary btn--lg" data-grayscale-toggle type="button">Test Golden Rule (Grayscale)</button>
+          </div>
+        </div>
+
+        <!-- Hero Showcase Graphic Frame (hero.webp) -->
+        <div class="hero__graphic-wrap">
+          <div class="hero__graphic-bar">
+            <span class="viewport-bar__dot viewport-bar__dot--red"></span>
+            <span class="viewport-bar__dot viewport-bar__dot--yellow"></span>
+            <span class="viewport-bar__dot viewport-bar__dot--green"></span>
+            <span style="font-family: var(--font-body); font-size: var(--font-size-xs); color: var(--color-text-light); margin-left: 6px;">Lumos Responsive Interface Mockup</span>
+          </div>
+          <picture>
+            <source srcset="assets/images/hero.webp" type="image/webp">
+            <img src="assets/images/hero.webp" alt="Responsive Interface Demonstration" class="hero__graphic-img" width="800" height="500" loading="eager">
+          </picture>
         </div>
       </div>
     </section>
 
-    <!-- KEY METRICS STATS SECTION -->
+    <!-- KEY METRICS STATS SECTION (stats-bg.webp) -->
     <section class="stats" aria-label="Project metrics">
+      <img src="assets/images/stats-bg.webp" alt="" class="stats__bg" aria-hidden="true" loading="lazy">
       <div class="container">
         <div class="stats__grid">
           <div class="stats__item" data-reveal>
@@ -194,8 +227,48 @@
       </div>
     </section>
 
+    <!-- ABOUT THIS PROJECT SECTION (about.webp) -->
+    <section id="about" class="section" aria-labelledby="about-title">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-grid__content" data-reveal>
+            <span class="section__tag">Who We Are</span>
+            <h2 id="about-title" class="section__title section__title--left">About This Project</h2>
+            <p class="about-grid__text">We believe that great web experiences start with clean code and thoughtful design. This project demonstrates a complete mobile-first, responsive frontend built from scratch — no frameworks, just fundamentals.</p>
+            <p class="about-grid__text">Every pixel is intentional. Every element serves a purpose. From semantic HTML landmarks to fluid CSS Grid layouts, we build with the user in mind.</p>
+            <ul class="about-grid__list">
+              <li class="about-grid__list-item">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>
+                Semantic HTML5 with proper structural landmarks
+              </li>
+              <li class="about-grid__list-item">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>
+                CSS Grid + Flexbox responsive fluid layouts
+              </li>
+              <li class="about-grid__list-item">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>
+                Dark/light theme toggle with persistent state
+              </li>
+              <li class="about-grid__list-item">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>
+                WCAG AA compliant accessibility &amp; form validation
+              </li>
+            </ul>
+          </div>
+
+          <!-- Prominent About Image (about.webp) -->
+          <figure class="about-grid__media" data-reveal>
+            <picture>
+              <source srcset="assets/images/about.webp" type="image/webp">
+              <img src="assets/images/about.webp" alt="Frontend Engineering Collaboration" class="about-grid__img" width="800" height="500" loading="lazy">
+            </picture>
+          </figure>
+        </div>
+      </div>
+    </section>
+
     <!-- THE VISION: ARCHITECTING FOR THE MOBILE WEB (Slide 3) -->
-    <section id="mobile-vision" class="section" aria-labelledby="vision-title">
+    <section id="mobile-vision" class="section section--alt" aria-labelledby="vision-title">
       <div class="container">
         <div class="section__header" data-reveal>
           <span class="section__tag">The Vision</span>
@@ -258,7 +331,7 @@
     </section>
 
     <!-- PILLAR 2: VISUAL DESIGN & 2025 AESTHETICS (Slide 4) -->
-    <section id="aesthetics" class="section section--alt" aria-labelledby="aesthetics-title">
+    <section id="aesthetics" class="section" aria-labelledby="aesthetics-title">
       <div class="container">
         <div class="section__header" data-reveal>
           <span class="section__tag">Pillar 2: Visual Design</span>
@@ -313,7 +386,7 @@
     </section>
 
     <!-- THE TOOLKIT: RAW MATERIALS (Slide 5) -->
-    <section id="toolkit" class="section" aria-labelledby="toolkit-title">
+    <section id="toolkit" class="section section--alt" aria-labelledby="toolkit-title">
       <div class="container">
         <div class="section__header" data-reveal>
           <span class="section__tag">The Toolkit</span>
@@ -375,6 +448,70 @@ const ThemeToggle = (() => {
   return { toggle };
 })();
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS SECTION (sarah.webp, marcus.webp, emily.webp) -->
+    <section id="testimonials" class="section" aria-labelledby="testimonials-title">
+      <div class="container">
+        <div class="section__header" data-reveal>
+          <span class="section__tag">Testimonials</span>
+          <h2 id="testimonials-title" class="section__title">What People Say</h2>
+          <p class="section__subtitle">Trusted by engineering leads who value clean code, accessibility, and modern responsive standards.</p>
+        </div>
+
+        <div class="testimonials-grid">
+          <article class="testimonial-card" data-reveal>
+            <blockquote class="testimonial-card__quote">
+              <svg class="testimonial-card__quote-icon" viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+              <p>The attention to semantic structure and WCAG accessibility made our web app stand out. Truly professional work following 2025 best practices.</p>
+            </blockquote>
+            <div class="testimonial-card__author">
+              <picture>
+                <source srcset="assets/images/team/sarah.webp" type="image/webp">
+                <img src="assets/images/team/sarah.webp" alt="Sarah Chen" class="testimonial-card__avatar" width="48" height="48" loading="lazy">
+              </picture>
+              <div>
+                <p class="testimonial-card__name">Sarah Chen</p>
+                <p class="testimonial-card__role">Lead Developer, TechFlow</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="testimonial-card" data-reveal>
+            <blockquote class="testimonial-card__quote">
+              <svg class="testimonial-card__quote-icon" viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+              <p>A responsive, clean interface that works flawlessly on every device. The mobile-first approach really shines through in the final result.</p>
+            </blockquote>
+            <div class="testimonial-card__author">
+              <picture>
+                <source srcset="assets/images/team/marcus.webp" type="image/webp">
+                <img src="assets/images/team/marcus.webp" alt="Marcus Rivera" class="testimonial-card__avatar" width="48" height="48" loading="lazy">
+              </picture>
+              <div>
+                <p class="testimonial-card__name">Marcus Rivera</p>
+                <p class="testimonial-card__role">Product Manager, BuildWave</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="testimonial-card" data-reveal>
+            <blockquote class="testimonial-card__quote">
+              <svg class="testimonial-card__quote-icon" viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+              <p>The code quality speaks for itself — modular, well-organized, and a joy to maintain. CSS variables make dark/light mode theming effortless.</p>
+            </blockquote>
+            <div class="testimonial-card__author">
+              <picture>
+                <source srcset="assets/images/team/emily.webp" type="image/webp">
+                <img src="assets/images/team/emily.webp" alt="Emily Nakamura" class="testimonial-card__avatar" width="48" height="48" loading="lazy">
+              </picture>
+              <div>
+                <p class="testimonial-card__name">Emily Nakamura</p>
+                <p class="testimonial-card__role">CTO, PixelCraft</p>
+              </div>
+            </div>
+          </article>
         </div>
       </div>
     </section>
@@ -549,6 +686,7 @@ const ThemeToggle = (() => {
           <ul class="site-footer__list" role="list">
             <li><a href="#home" class="site-footer__link">Home</a></li>
             <li><a href="#strategy" class="site-footer__link">Strategy &amp; Blueprint</a></li>
+            <li><a href="#about" class="site-footer__link">About</a></li>
             <li><a href="#mobile-vision" class="site-footer__link">Mobile Web Vision</a></li>
             <li><a href="#aesthetics" class="site-footer__link">2025 Aesthetics</a></li>
           </ul>
