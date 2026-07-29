@@ -116,14 +116,6 @@
 
     <!-- HERO SECTION (Slide 1 Overview) -->
     <section id="home" class="hero" aria-labelledby="hero-title">
-      <div class="hero__bg">
-        <picture>
-          <source srcset="assets/images/hero-bg.webp" type="image/webp">
-          <img src="assets/images/hero-bg.webp" alt="Background Texture" class="hero__bg-img" width="1600" height="900" loading="eager" fetchpriority="high">
-        </picture>
-        <div class="hero__overlay"></div>
-      </div>
-
       <div class="container hero__grid" data-reveal>
         <!-- Hero Text Column -->
         <div class="hero__content">
@@ -136,42 +128,69 @@
           </div>
         </div>
 
-        <!-- Hero Showcase Graphic Frame (hero.webp) -->
-        <div class="hero__graphic-wrap">
-          <div class="hero__graphic-bar">
-            <span class="viewport-bar__dot viewport-bar__dot--red"></span>
-            <span class="viewport-bar__dot viewport-bar__dot--yellow"></span>
-            <span class="viewport-bar__dot viewport-bar__dot--green"></span>
-            <span style="font-family: var(--font-body); font-size: var(--font-size-xs); color: var(--color-text-light); margin-left: 6px;">Lumos Responsive Interface Mockup</span>
+        <!-- Hero Dual Photo Showcase (100% Crisp & Visible!) -->
+        <div class="hero__showcase">
+          <div class="hero__card">
+            <div class="hero__card-bar">
+              <div class="hero__card-dots">
+                <span class="viewport-bar__dot viewport-bar__dot--red"></span>
+                <span class="viewport-bar__dot viewport-bar__dot--yellow"></span>
+                <span class="viewport-bar__dot viewport-bar__dot--green"></span>
+              </div>
+              <span class="hero__card-title">Frontend Workstation Setup</span>
+            </div>
+            <img src="assets/images/hero.webp" alt="Frontend Workstation" class="hero__card-img" width="800" height="400" loading="eager">
           </div>
-          <picture>
-            <source srcset="assets/images/hero.webp" type="image/webp">
-            <img src="assets/images/hero.webp" alt="Responsive Interface Demonstration" class="hero__graphic-img" width="800" height="500" loading="eager">
-          </picture>
+
+          <div class="hero__card">
+            <div class="hero__card-bar">
+              <div class="hero__card-dots">
+                <span class="viewport-bar__dot viewport-bar__dot--red"></span>
+                <span class="viewport-bar__dot viewport-bar__dot--yellow"></span>
+                <span class="viewport-bar__dot viewport-bar__dot--green"></span>
+              </div>
+              <span class="hero__card-title">HTML5 Code Editor View</span>
+            </div>
+            <img src="assets/images/hero-bg.webp" alt="Code Editor View" class="hero__card-img" width="800" height="400" loading="eager">
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- KEY METRICS STATS SECTION (stats-bg.webp) -->
+    <!-- KEY METRICS STATS SECTION -->
     <section class="stats" aria-label="Project metrics">
-      <img src="assets/images/stats-bg.webp" alt="" class="stats__bg" aria-hidden="true" loading="lazy">
       <div class="container">
-        <div class="stats__grid">
-          <div class="stats__item" data-reveal>
-            <span class="stats__number" data-count="3">0</span>
-            <span class="stats__label">Breakpoints (375, 768, 1200px)</span>
+        <div class="stats__wrapper" data-reveal>
+          <div class="stats__grid">
+            <div class="stats__item">
+              <span class="stats__number" data-count="3">0</span>
+              <span class="stats__label">Breakpoints (375, 768, 1200px)</span>
+            </div>
+            <div class="stats__item">
+              <span class="stats__number" data-count="100">0</span><span class="stats__suffix">%</span>
+              <span class="stats__label">Mobile-First Paradigm</span>
+            </div>
+            <div class="stats__item">
+              <span class="stats__number" data-count="0">0</span>
+              <span class="stats__label">Framework Dependencies</span>
+            </div>
+            <div class="stats__item">
+              <span class="stats__number" data-count="100">0</span><span class="stats__suffix">%</span>
+              <span class="stats__label">WCAG AA Compliant</span>
+            </div>
           </div>
-          <div class="stats__item" data-reveal>
-            <span class="stats__number" data-count="100">0</span><span class="stats__suffix">%</span>
-            <span class="stats__label">Mobile-First Paradigm</span>
-          </div>
-          <div class="stats__item" data-reveal>
-            <span class="stats__number" data-count="0">0</span>
-            <span class="stats__label">Framework Dependencies</span>
-          </div>
-          <div class="stats__item" data-reveal>
-            <span class="stats__number" data-count="100">0</span><span class="stats__suffix">%</span>
-            <span class="stats__label">WCAG AA Compliant</span>
+
+          <!-- Developer Workspace Showcase Card (stats-bg.webp) -->
+          <div class="hero__card">
+            <div class="hero__card-bar">
+              <div class="hero__card-dots">
+                <span class="viewport-bar__dot viewport-bar__dot--red"></span>
+                <span class="viewport-bar__dot viewport-bar__dot--yellow"></span>
+                <span class="viewport-bar__dot viewport-bar__dot--green"></span>
+              </div>
+              <span class="hero__card-title">Developer Engineering Environment</span>
+            </div>
+            <img src="assets/images/stats-bg.webp" alt="Engineering Environment" class="hero__card-img" style="height: 220px;" width="800" height="400" loading="lazy">
           </div>
         </div>
       </div>
@@ -258,10 +277,7 @@
 
           <!-- Prominent About Image (about.webp) -->
           <figure class="about-grid__media" data-reveal>
-            <picture>
-              <source srcset="assets/images/about.webp" type="image/webp">
-              <img src="assets/images/about.webp" alt="Frontend Engineering Collaboration" class="about-grid__img" width="800" height="500" loading="lazy">
-            </picture>
+            <img src="assets/images/about.webp" alt="Frontend Engineering Collaboration" class="about-grid__img" width="800" height="500" loading="lazy">
           </figure>
         </div>
       </div>
@@ -468,10 +484,7 @@ const ThemeToggle = (() => {
               <p>The attention to semantic structure and WCAG accessibility made our web app stand out. Truly professional work following 2025 best practices.</p>
             </blockquote>
             <div class="testimonial-card__author">
-              <picture>
-                <source srcset="assets/images/team/sarah.webp" type="image/webp">
-                <img src="assets/images/team/sarah.webp" alt="Sarah Chen" class="testimonial-card__avatar" width="48" height="48" loading="lazy">
-              </picture>
+              <img src="assets/images/team/sarah.webp" alt="Sarah Chen" class="testimonial-card__avatar" width="48" height="48" loading="lazy">
               <div>
                 <p class="testimonial-card__name">Sarah Chen</p>
                 <p class="testimonial-card__role">Lead Developer, TechFlow</p>
@@ -485,10 +498,7 @@ const ThemeToggle = (() => {
               <p>A responsive, clean interface that works flawlessly on every device. The mobile-first approach really shines through in the final result.</p>
             </blockquote>
             <div class="testimonial-card__author">
-              <picture>
-                <source srcset="assets/images/team/marcus.webp" type="image/webp">
-                <img src="assets/images/team/marcus.webp" alt="Marcus Rivera" class="testimonial-card__avatar" width="48" height="48" loading="lazy">
-              </picture>
+              <img src="assets/images/team/marcus.webp" alt="Marcus Rivera" class="testimonial-card__avatar" width="48" height="48" loading="lazy">
               <div>
                 <p class="testimonial-card__name">Marcus Rivera</p>
                 <p class="testimonial-card__role">Product Manager, BuildWave</p>
@@ -502,10 +512,7 @@ const ThemeToggle = (() => {
               <p>The code quality speaks for itself — modular, well-organized, and a joy to maintain. CSS variables make dark/light mode theming effortless.</p>
             </blockquote>
             <div class="testimonial-card__author">
-              <picture>
-                <source srcset="assets/images/team/emily.webp" type="image/webp">
-                <img src="assets/images/team/emily.webp" alt="Emily Nakamura" class="testimonial-card__avatar" width="48" height="48" loading="lazy">
-              </picture>
+              <img src="assets/images/team/emily.webp" alt="Emily Nakamura" class="testimonial-card__avatar" width="48" height="48" loading="lazy">
               <div>
                 <p class="testimonial-card__name">Emily Nakamura</p>
                 <p class="testimonial-card__role">CTO, PixelCraft</p>
