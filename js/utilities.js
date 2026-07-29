@@ -63,12 +63,78 @@ const Utils = (() => {
     requestAnimationFrame(step);
   }
 
+  function initScrollReveal() {
+    const revealEls = document.querySelectorAll('[data-reveal]');
+
+    if (!revealEls.length) return;
+
+    // Mark all elements as observed so CSS fallback doesn't apply
+    revealEls.forEach(el => el.setAttribute('data-observe', 'true'));
+
+    if (!('IntersectionObserver' in window) || prefersReducedMotion) {
+      // Fallback: show everything immediately
+      revealEls.forEach(el => {
+        el.classList.add('revealed');
+      });
+      return;
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.1,
+      rootMargin: '0px 0px -40px 0px'
+    });
+
+    revealEls.forEach(el => observer.observe(el));
+
+    // Immediately trigger for elements already in viewport
+    revealEls.forEach(el => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight && rect.bottom > 0) {
+        el.classList.add('revealed');
+        observer.unobserve(el);
+      }
+    });
+  }
+
+  function initCounters() {
+    const counterEls = document.querySelectorAll('[data-count]');
+    if (!counterEls.length) return;
+
+    if (!('IntersectionObserver' in window) || prefersReducedMotion) {
+      counterEls.forEach(el => {
+        el.textContent = el.getAttribute('data-count');
+      });
+      return;
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const target = parseInt(entry.target.getAttribute('data-count'), 10);
+          animateCounter(entry.target, target, 1500);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.3 });
+
+    counterEls.forEach(el => observer.observe(el));
+  }
+
   return {
     throttle,
     debounce,
     safeEl,
     safeAll,
     animateCounter,
+    initScrollReveal,
+    initCounters,
     prefersReducedMotion,
   };
 })();

@@ -44,26 +44,29 @@
 }
 
 .btn--secondary {
-  background-color: rgba(255,255,255,0.1);
-  color: var(--color-white);
-  border-color: rgba(255,255,255,0.4);
-  backdrop-filter: blur(4px);
+  background-color: var(--color-bg-alt);
+  color: var(--color-text);
+  border-color: var(--color-border);
 }
 
 .btn--secondary:hover {
-  background-color: rgba(255,255,255,0.2);
-  border-color: rgba(255,255,255,0.7);
+  background-color: var(--color-bg-card);
+  border-color: var(--color-primary);
+  color: var(--color-primary);
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  box-shadow: 0 6px 20px rgba(165,134,111,0.15);
 }
 
-.btn--secondary:active {
-  transform: translateY(0);
+[data-theme="dark"] .btn--secondary {
+  background-color: rgba(255,255,255,0.08);
+  color: var(--color-text);
+  border-color: rgba(255,255,255,0.2);
 }
 
-.btn--secondary:focus-visible {
-  outline: 2px solid var(--color-white);
-  outline-offset: 3px;
+[data-theme="dark"] .btn--secondary:hover {
+  background-color: rgba(255,255,255,0.14);
+  border-color: var(--color-primary);
+  color: var(--color-primary);
 }
 
 .btn--disabled {
@@ -173,11 +176,15 @@
 }
 
 .testimonial-card__avatar {
-  width: 48px;
-  height: 48px;
+  width: 48px !important;
+  height: 48px !important;
+  min-width: 48px;
+  min-height: 48px;
   border-radius: var(--radius-full);
   object-fit: cover;
+  object-position: center;
   border: 2px solid var(--color-border);
+  flex-shrink: 0;
 }
 
 .testimonial-card__name {

@@ -21,7 +21,23 @@ body {
 img,
 picture,
 video,
-canvas,
+canvas {
+  display: block;
+  max-width: 100%;
+}
+
+img {
+  /* Allow explicit height overrides — don't force height:auto globally */
+  height: auto;
+}
+
+img.hero__card-img,
+img.about-grid__img,
+img.testimonial-card__avatar {
+  /* These images need explicit fixed heights — override reset */
+  height: revert;
+}
+
 svg {
   display: block;
   max-width: 100%;

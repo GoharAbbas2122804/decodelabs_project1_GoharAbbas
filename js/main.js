@@ -53,6 +53,8 @@ const App = (() => {
     Navigation.init();
     FormValidation.init();
     ThemeToggle.init();
+    Utils.initScrollReveal();
+    Utils.initCounters();
     if (typeof InteractiveFeatures !== 'undefined') {
       InteractiveFeatures.init();
     }
