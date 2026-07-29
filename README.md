@@ -2,6 +2,10 @@
 
 A fully responsive, mobile-first frontend interface built with **HTML5**, **CSS3**, and **Vanilla JavaScript**. No frameworks, no libraries — just clean, semantic, and accessible code.
 
+## Screenshot
+
+![Hero Section — Lumos Responsive Frontend Interface](assets/images/screenshot.png)
+
 ## Features
 
 - **Fully Responsive** — Works perfectly on mobile (320px), tablet (768px), laptop (1024px), and desktop (1440px+)
@@ -32,6 +36,12 @@ project1/
 │   └── utilities.js
 ├── assets/
 │   ├── images/
+│   │   ├── screenshot.png
+│   │   ├── hero.webp
+│   │   ├── hero-bg.webp
+│   │   ├── about.webp
+│   │   ├── stats-bg.webp
+│   │   └── team/
 │   ├── icons/
 │   └── fonts/
 └── README.md
