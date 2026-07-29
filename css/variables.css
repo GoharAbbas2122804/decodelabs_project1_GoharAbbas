@@ -1,0 +1,93 @@
+:root {
+  --color-primary: #A5866F;
+  --color-primary-dark: #8B6F55;
+  --color-primary-light: #C4A882;
+  --color-secondary: #A0D4E0;
+  --color-secondary-dark: #7BB8C8;
+  --color-secondary-light: #C8E8EF;
+  --color-neutral: #F2F0EA;
+  --color-neutral-dark: #D5D0C8;
+  --color-text: #3A3632;
+  --color-text-light: #6B6560;
+  --color-white: #FFFFFF;
+  --color-bg: #FFFFFF;
+  --color-bg-alt: #F7F5F1;
+  --color-bg-card: #FFFFFF;
+  --color-accent: #A0D4E0;
+  --color-error: #C0392B;
+  --color-success: #27AE60;
+  --color-border: #E8E4DE;
+
+  --font-heading: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-body: 'Roboto', system-ui, -apple-system, sans-serif;
+
+  --font-weight-light: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  --font-size-xs: clamp(0.75rem, 0.72rem + 0.15vw, 0.8125rem);
+  --font-size-sm: clamp(0.8125rem, 0.78rem + 0.15vw, 0.9375rem);
+  --font-size-base: clamp(0.9375rem, 0.88rem + 0.25vw, 1.0625rem);
+  --font-size-md: clamp(1.0625rem, 0.98rem + 0.4vw, 1.3125rem);
+  --font-size-lg: clamp(1.25rem, 1.1rem + 0.75vw, 1.75rem);
+  --font-size-xl: clamp(1.5rem, 1.25rem + 1.25vw, 2.25rem);
+  --font-size-2xl: clamp(1.875rem, 1.5rem + 1.875vw, 3rem);
+  --font-size-3xl: clamp(2.25rem, 1.75rem + 2.5vw, 3.75rem);
+  --font-size-4xl: clamp(2.75rem, 2rem + 3.75vw, 5rem);
+
+  --spacing-1: 0.5rem;
+  --spacing-2: 1rem;
+  --spacing-3: 1.5rem;
+  --spacing-4: 2rem;
+  --spacing-5: 2.5rem;
+  --spacing-6: 3rem;
+  --spacing-8: 4rem;
+  --spacing-10: 5rem;
+  --spacing-12: 6rem;
+  --spacing-16: 8rem;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.12);
+
+  --transition-fast: 150ms ease;
+  --transition-base: 250ms ease;
+  --transition-slow: 400ms ease;
+  --transition-spring: 400ms cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  --container-max: 1200px;
+  --container-padding: 1.25rem;
+
+  --header-height: 72px;
+
+  --gradient-primary: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+  --gradient-secondary: linear-gradient(135deg, var(--color-secondary), var(--color-secondary-dark));
+  --gradient-hero: linear-gradient(135deg, rgba(165,134,111,0.92), rgba(58,54,50,0.88));
+}
+
+[data-theme="dark"] {
+  --color-text: #F2F0EA;
+  --color-text-light: #A8A098;
+  --color-bg: #141210;
+  --color-bg-alt: #1C1A18;
+  --color-bg-card: #222019;
+  --color-white: #141210;
+  --color-neutral: #2A2724;
+  --color-neutral-dark: #3A3632;
+  --color-border: #333028;
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.2);
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.25);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.35);
+  --shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.4);
+  --gradient-hero: linear-gradient(135deg, rgba(165,134,111,0.88), rgba(20,18,16,0.95));
+}
