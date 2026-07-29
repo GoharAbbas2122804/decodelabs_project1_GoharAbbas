@@ -53,6 +53,9 @@ const App = (() => {
     Navigation.init();
     FormValidation.init();
     ThemeToggle.init();
+    if (typeof InteractiveFeatures !== 'undefined') {
+      InteractiveFeatures.init();
+    }
   }
 
   if (document.readyState === 'loading') {
